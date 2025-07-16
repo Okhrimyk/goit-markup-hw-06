@@ -20,6 +20,9 @@ body {
 .portfolio-title-secondary {
     color: #2e2f42;
 }
+button {
+    cursor: pointer;
+}
 
 img {
     display: block;
@@ -798,8 +801,15 @@ margin-bottom: 16px;
     justify-content: center;
     align-items: center;
     gap: 16px;
-
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.footer-social-list .social-link-item .social-link:hover,
+.footer-social-list .social-link-item .social-link:focus
+ {
+    background-color: #31d0aa;}
+
+
 .social-link-item {
 }
 .social-link {
@@ -846,6 +856,8 @@ margin-bottom: 16px;
     letter-spacing: 0.04em;
     color: #fff;
     margin-bottom: 16px;
+     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                    borde-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-input-email:hover, 
 .footer-input-email:focus {
@@ -875,6 +887,11 @@ color: #fff;
 box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     white-space: nowrap;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-button:focus,
+.footer-button:hover {
+    background-color: #31d0aa;
 }
 .footer-button-svg {
     fill: #fff;
@@ -936,4 +953,222 @@ box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     .footer-form-wrap {
         gap: 16px;
     }
+}
+
+ /* Backdrop start */
+ .backdrop {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(46, 47, 66, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0,0.2, 1),
+               visibility  250ms cubic-bezier(0.4, 0,0.2, 1);
+ }
+
+ .backdrop.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+     }
+
+.backdro:not(.is-open) .modal{
+    transform: translate (-50%, -50%) scale(1.5);
+}
+
+.modal {
+     position: absolute;
+    border-radius: 4px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 288px;
+    min-height: 623px;   
+    padding: 72px 16px 24px 16px;
+    background-color: #fcfcfc ;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+ .backdrop-button-close {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px; 
+    border-radius: 50%;
+    stroke-width: 1px;    
+    border:1px solid rgba(0, 0, 0, 0.1);
+    padding: 0;
+    background-color: #e7e9fc;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ }
+ 
+.backdrop-button-close:hover,
+.backdrop-button-close:focus {
+    background-color:#404bbf;
+    border: none;   
+}
+.backdrope-icon-close {   
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop-button-close:hover .backdrope-icon-close,
+.backdrop-button-close:focus .backdrope-icon-close{
+    fill: #fff;
+}
+
+.backdrop-text {
+font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.02em;
+text-align: center;
+color: #2e2f42;
+margin-bottom: 16px;
+}
+
+.backdrop-input-wrap {
+    margin-bottom: 8px;
+}
+
+.backdrop-lable {
+display: block;
+font-size: 12px;
+line-height: 1.17;
+letter-spacing: 0.04em;
+color: #8e8f99;
+margin-bottom: 4px;
+
+}
+
+.backdrop-input-wrap-icon {
+position: relative;
+margin-bottom: 8px;
+}
+
+.backdrop-input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    background-color: transparent;
+    padding-left: 38px;
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    fill: #2e2f42;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop-input:hover,
+.backdrop-input:focus {
+    border-color:#4d5ae5;
+}
+
+.backdrop-input:hover + .backdrop-icon,
+.backdrop-input:focus + .backdrop-icon {
+    fill: #4d5ae5;
+}
+
+.backdrop-input-wrap-comment {
+    margin-bottom: 16px;
+}
+.backdrop-input.comment {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+    height: 120px;
+    resize: none;
+    padding: 8px 16px;
+}
+
+.backdrop-input.comment:hover,
+.backdrop-input.comment:focus {
+    border-color: #4d5ae5;
+}
+
+.custom-checkbox-wrap {
+    margin-bottom: 24px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border:0;
+}
+
+
+.backdrop-lable-privatpolicy {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+}
+
+.custom-checkbox {
+    width: 16px;
+    height: 16px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    fill: transparent;
+    border-radius: 2px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    margin-right: 8px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+                flex-shrink: 0;
+}
+
+.backdrop-lable-privatpolicy {
+    display: flex;
+    align-items: center;
+
+}
+
+.visually-hidden:checked+.backdrop-lable-privatpolicy>.custom-checkbox {
+    background-color: #404bbf;
+    border: none;
+    fill: #F4F4FD;
+}
+
+.backdrop-link {
+    color: #4d5ae5;
+}
+@media screen and (min-width:768px) {
+
+.modal {
+    width: 408px;
+    min-height: 584px;
+}
+
+.backdrop-input-wrap-icon {
+    margin-bottom: 8px;
+}
+.backdrop-lable-privatpolicy {
+    display: block;
+}
 }
