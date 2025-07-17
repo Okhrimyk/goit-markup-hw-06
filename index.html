@@ -54,81 +54,98 @@
           </ul>
         </address>
       </div>
-      <button class="burger-btn" type="button">
+      <button class="burger-btn" data-menu-open type="button">
         <svg class="burger-btm-icon" width="24" height="24">
           <use href="./images/icons.svg#icon-burger-btn"></use>
         </svg>
       </button>
-      <div class="container mobile-menu ">     
-          <button class=" button-close" type="button">
+      <div class="mobile-menu" data-menu>
+        <div class="container mobile-menu-container">
+          <button class="button-close" data-menu-close type="button">
             <svg class="button-close-icon" width="8" height="8">
               <use href="./images/icons.svg#icon-close"></use>
             </svg>
           </button>
           <ul class="burger-menu-nav-list">
-            <li class="burger-menu-nav-item"><a href="">Studio</a></li>
-            <li class="burger-menu-nav-item"><a href="">Portfolio</a></li>
-            <li class="burger-menu-nav-item"><a href="">Contacts</a></li>
+            <li class="burger-menu-nav-item">
+              <a class="mobile-nav-link" href="">Studio</a>
+            </li>
+            <li class="burger-menu-nav-item">
+              <a class="mobile-nav-link" href="">Portfolio</a>
+            </li>
+            <li class="burger-menu-nav-item">
+              <a class="mobile-nav-link" href="">Contacts</a>
+            </li>
           </ul>
-        <address class="mobile-menu-contact">
-        <ul class="mobile-menu-contact-list">
-          <li class="mobile-menu-contact-item" ><a class="mobile-menu-contact-link" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
-          <li class="mobile-menu-contact-item" ><a class="mobile-menu-contact-link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-        </ul> 
-        
-      </address>
-      <div class="social-link-container">
-          <ul class="mobile-menu-social-list">
-                  <li class="social-link-item">
-                    <a
-                      class="social-link"
-                      href="https://www.instagram.com/"
-                      target="_blank"
-                    >
-                      <svg class="social-icon" width="24" height="24">
-                        <use href="./images/icons.svg#icon-instagram"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="social-link-item">
-                    <a
-                      class="social-link"
-                      href="https://www.twitter.com/"
-                      target="_blank"
-                    >
-                      <svg class="social-icon" width="24" height="24">
-                        <use href="./images/icons.svg#icon-twitter"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="social-link-item">
-                    <a
-                      class="social-link"
-                      href="https://www.facebook.com/"
-                      target="_blank"
-                    >
-                      <svg class="social-icon" width="24" height="24">
-                        <use href="./images/icons.svg#icon-facebook"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="social-link-item">
-                    <a
-                      class="social-link"
-                      href="https://www.linkedin.com//"
-                      target="_blank"
-                    >
-                      <svg class="social-icon" width="24" height="24">
-                        <use href="./images/icons.svg#icon-linkedin"></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
+          <address class="mobile-menu-contact">
+            <ul class="mobile-menu-contact-list">
+              <li class="mobile-menu-contact-item">
+                <a class="mobile-menu-contact-link" href="tel:+110001111111"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li class="mobile-menu-contact-item">
+                <a
+                  class="mobile-menu-contact-link"
+                  href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+          </address>
+          <div class="social-link-container">
+            <ul class="mobile-menu-social-list">
+              <li class="social-link-item">
+                <a
+                  class="social-link"
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                >
+                  <svg class="social-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-link-item">
+                <a
+                  class="social-link"
+                  href="https://www.twitter.com/"
+                  target="_blank"
+                >
+                  <svg class="social-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-link-item">
+                <a
+                  class="social-link"
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                >
+                  <svg class="social-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-link-item">
+                <a
+                  class="social-link"
+                  href="https://www.linkedin.com//"
+                  target="_blank"
+                >
+                  <svg class="social-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-     </div>      
+      </div>
     </header>
     <main>
-      <section class="hero-baner ">
+      <section class="hero-baner">
         <div class="container">
           <h1 class="hero-baner-title">
             Effective Solutions for Your Business
@@ -200,7 +217,11 @@
             <li class="team-items">
               <img
                 class="team-img"
-                src="./images/mark_guerrero.jpg"
+                srcset="
+                  ./images/mark_guerrero-1x.jpg 1x,
+                  ./images/mark_guerrero-2x.jpg 2x
+                "
+                src="./images/mark_guerrero-1x.jpg"
                 alt="Foto Mark Guerrero"
                 width="264"
                 height="260"
@@ -259,7 +280,11 @@
             <li class="team-items">
               <img
                 class="team-img"
-                src="./images/tom_ford.jpg"
+                srcset="
+                  ./images/tom_ford-1x.jpg 1x,
+                  ./images/tom_ford-2x.jpg 2x
+                "
+                src="./images/tom_ford-1x.jpg"
                 alt="Foto Tom Ford"
                 width="264"
                 height="260"
@@ -318,7 +343,11 @@
             <li class="team-items">
               <img
                 class="team-img"
-                src="./images/camila_garcia.jpg"
+                srcset="
+                  ./images/camila_garcia-1x.jpg 1x,
+                  ./images/camila_garcia-2x.jpg 2x
+                "
+                src="./images/camila_garcia-1x.jpg"
                 alt="Foto Camila Garcia"
                 width="264"
                 height="260"
@@ -377,7 +406,11 @@
             <li class="team-items">
               <img
                 class="team-img"
-                src="./images/daniel_wilson.jpg"
+                srcset="
+                  /images/daniel_wilson-1x.jpg 1x,
+                  /images/daniel_wilson-2x.jpg 2x
+                "
+                src="./images/daniel_wilson-1x.jpg"
                 alt="Foto Daniel Wilson"
                 width="264"
                 height="260"
@@ -444,6 +477,7 @@
               <div class="overlay">
                 <img
                   class="portfolio-img"
+                  srcset="./images/imgapp-1x.jpg 1x, ./images/imgapp-2x.jpg 2x"
                   src="./images/imgapp.jpg"
                   alt="imgapp"
                   width="360"
@@ -464,6 +498,7 @@
               <div class="overlay">
                 <img
                   class="portfolio-img"
+                  srcset="./images/qrcode-1x.jpg 1x, ./images/qrcode-2x.jpg 2x"
                   src="./images/qrcode.jpg"
                   alt="qrcode"
                   width="360"
@@ -484,6 +519,7 @@
               <div class="overlay">
                 <img
                   class="portfolio-img"
+                  srcset="./images/laptop-1x.jpg 1x, ./images/laptop-2x.jpg 2x"
                   src="./images/laptop.jpg"
                   alt="laptop"
                   width="360"
@@ -504,6 +540,7 @@
               <div class="overlay">
                 <img
                   class="portfolio-img"
+                  srcset="./images/car-1x.jpg 1x, ./images/car-2x.jpg 2x"
                   src="./images/car.jpg"
                   alt="car"
                   width="360"
@@ -524,6 +561,7 @@
               <div class="overlay">
                 <img
                   class="portfolio-img"
+                  srcset="./images/phonne-1x.jpg 1x, ./images/phone-2x.jpg 2x"
                   src="./images/phone.jpg"
                   alt="phone"
                   width="360"
@@ -544,7 +582,8 @@
               <div class="overlay">
                 <img
                   class="portfolio-img"
-                  src="./images/girl.jpg"
+                  srcset="./images/girl-1x.jpg 1x, ./images/girl-2x.jpg 2x"
+                  src="./images/girl-1x.jpg"
                   alt="girl"
                   width="360"
                   height="300"
@@ -646,7 +685,7 @@
         </div>
       </div>
     </footer>
-    <div class="backdrop is-open" data-modal>
+    <div class="backdrop" data-modal>
       <div class="modal">
         <button class="backdrop-button-close" type="button" data-modal-close>
           <svg class="backdrope-icon-close" width="8" height="8">
@@ -721,10 +760,12 @@
                 <svg class="custom-check-icon" width="10" height="8">
                   <use href="./images/icons.svg#icon-check"></use>
                 </svg> </span
-              ><span >I accept the terms and conditions of the
-              <a class="backdrop-link" target="_blank" href=""
-                >Privacy Policy</a
-              ></span>
+              ><span
+                >I accept the terms and conditions of the
+                <a class="backdrop-link" target="_blank" href=""
+                  >Privacy Policy</a
+                ></span
+              >
             </label>
           </div>
           <button class="backdrop-submit-button" type="submit">Send</button>
@@ -732,5 +773,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
